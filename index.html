@@ -10,24 +10,27 @@
       width: 30%;
       height: 40pt;
     }
+    b {
+      color: red;
+    }
   </style>
 </head>
 <body>
   <h1>Request Form</h1>
   <form action="https://gmail-api-test.iohtheprotogen.workers.dev/" method="POST">
     
-  </label for="fname">First Name:</label>
+  </label for="fname">First Name <b>*</b></label>
     <br>
     <input id="fname" type="text" name="fname" required>
     <br><br>
 
-    <label for="lname">Last Name:</label>
+    <label for="lname">Last Name <b>*</b></label>
     <br>
     <input id="lname" type="text" name="lname" required>
     <br><br>
 
     <label for="phone">
-      Phone Number (Please provide a number that accepts calls and texts):
+      Phone Number (Please provide a number that accepts calls and texts) <b>*</b>
       <br>
       <small><em>Format: 123-456-7890</em></small>
     </label>
@@ -35,13 +38,12 @@
     <input id="phone" type="tel" name="phone" required>
     <br><br>
 
-    <label>
-      Address:<br>
-      <input type="text" name="addr" required>
-    </label>
+    <label for="addr">Address <b>*</b></label>
+    <br>
+    <input id="addr" type="text" name="address" required>
     <br><br>
 
-    Do you have a(n):
+    Do you have a(n): <b>*</b>
     <br>
     <input id="inground" type="radio" name="pool-type" value="Inground Pool" required>
     <label for="inground">Inground Pool</label>
@@ -58,12 +60,12 @@
     <textarea id="brand" name="brand"></textarea>
     <br><br>
 
-    <label for="measurements">Provide your pool measurements (e.g., width, height, gallonage):</label>
+    <label for="measurements">Provide your pool measurements (e.g., width, height, gallonage) <b>*</b></label>
     <br>
     <textarea id="measurements" name="measurements"></textarea>
     <br><br>
 
-    How can we help you?
+    How can we help you? <b>*</b>
     <br>
     <input id="open" type="radio" name="help" value="Opening" required>
     <label for="open">Opening</label>
