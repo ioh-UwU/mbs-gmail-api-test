@@ -3,22 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Form</title>
+  <title>Request Form (Temp)</title>
+  <style>
+    textarea {
+      resize: none;
+      width: 30%;
+      height: 40pt;
+    }
+  </style>
 </head>
 <body>
-  <h1>Contact Us</h1>
+  <h1>Request Form</h1>
   <form action="https://gmail-api-test.iohtheprotogen.workers.dev/" method="POST">
-<!--     <label>
-      Your Email:
-      <input type="email" name="email" required>
-    </label> -->
-    <br />
-    <label>
-      Message:
-      <textarea name="message" required></textarea>
+    
+  </label for="fname">First Name:</label>
+    <br>
+    <input id="fname" type="text" name="fname" required>
+    <br><br>
+
+    <label for="lname">Last Name:</label>
+    <br>
+    <input id="lname" type="text" name="lname" required>
+    <br><br>
+
+    <label for="phone">
+      Phone Number (Please provide a number that accepts calls and texts):
+      <br>
+      <small><em>Format: 123-456-7890</em></small>
     </label>
-    <br />
-    <button type="submit">Send</button>
+    <br>
+    <input id="phone" type="tel" name="phone" required>
+    <br><br>
+
+    <label>
+      Address:<br>
+      <input type="text" name="addr" required>
+    </label>
+    <br><br>
+
+    Do you have a(n):
+    <br>
+    <input id="inground" type="radio" name="pool-type" value="Inground Pool" required>
+    <label for="inground">Inground Pool</label>
+    <br>
+    <input id="above" type="radio" name="pool-type" value="Above Ground Pool" required>
+    <label for="above">Above Ground Pool</label>
+    <br>
+    <input id="hot-tub" type="radio" name="pool-type" value="Hot Tub" required>
+    <label for="hot-tub">Hot Tub</label>
+    <br><br>
+
+    <label for="brand">What brand of pool or hot tub do you have?</label>
+    <br>
+    <textarea id="brand" name="brand"></textarea>
+    <br><br>
+
+    <label for="measurements">Provide your pool measurements (e.g., width, height, gallonage):</label>
+    <br>
+    <textarea id="measurements" name="measurements"></textarea>
+    <br><br>
+
+    How can we help you?
+    <br>
+    <input id="open" type="radio" name="help" value="Opening" required>
+    <label for="open">Opening</label>
+    <br>
+    <input id="close" type="radio" name="help" value="Closing" required>
+    <label for="close">Closing</label>
+    <br>
+    <input id="liner-install" type="radio" name="help" value="Liner install" required>
+    <label for="liner-install">Liner install</label>
+    <br>
+    <input id="repair" type="radio" name="help" value="Repair">
+    <label for="repair">Repair (pumps, motors, filters, liners, steel wall, plumbing, fiberglass, etc.)</label>
+    <br>
+    <input id="install" type="radio" name="help" value="Installation" required>
+    <label for="install">Install (pumps, motors, filters, plumbing)</label> 
+    <br>
+    <input id="deep-clean" type="radio" name="help" value="Deep clean" required>
+    <label for="deep-clean">Deep clean</label>
+    <br>
+    <input id="paint" type="radio" name="help" value="Pool painting" required>
+    <label for="paint">Pool painting</label>
+    <br><br>
+
+    <label>Provide details on your service request:</label>
+    <br>
+    <textarea name="details"></textarea>
+    <br><br>
+
+    <label>How did you hear about Max Q Services?</label>
+    <br>
+    <textarea name="reference"></textarea>
+    <br><br>
+
+    <button type="submit">Submit Request</button>
   </form>
 </body>
 </html>
