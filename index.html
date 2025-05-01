@@ -13,6 +13,9 @@
     b {
       color: red;
     }
+    input[id=addr] {
+      width: 30%;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +38,7 @@
       <small><em>Format: 123-456-7890</em></small>
     </label>
     <br>
-    <input id="phone" type="tel" name="phone" required>
+    <input id="phone" type="tel" name="phone" maxlength="12" required>
     <br><br>
 
     <label for="addr">Address <b>*</b></label>
@@ -89,17 +92,16 @@
     <label for="paint">Pool painting</label>
     <br><br>
 
-    <label>Provide details on your service request:</label>
+    <label for="details">Provide details on your service request:</label>
     <br>
-    <textarea name="details"></textarea>
+    <textarea id="details" name="details"></textarea>
     <br><br>
 
-    <label>How did you hear about Max Q Services?</label>
+    <label for="reference">How did you hear about Max Q Services?</label>
     <br>
-    <textarea name="reference"></textarea>
+    <textarea id="reference" name="reference"></textarea>
     <br><br>
-
-    <button type="submit">Submit Request</button>
+    <button type="submit" onclick="event.preventDefault()">Submit Request</button>
   </form>
 </body>
 </html>
